@@ -1,0 +1,23 @@
+// - .showcase--list используется для сортировки списком
+// - если задать этот класс, то кнопки аввтоматически перестроятся
+// - и станут в нужное состояние; а сетка продуктов превратится в список
+
+.catalog-showcase.showcase.showcase--lvl2.showcase--list.js-showcase-wrapper
+  .showcase-header
+    .showcase-headline Сплит-системы постоянной производительности
+    .showcase-products 78 товаров в данной категории
+    .showcase-sorting.sort
+      span.btn.sort-button.js-sort-button(type="button", data-sort="list")
+        i.sort-icon.sort-icon--list
+          span
+      span.btn.sort-button.sort-button--active.js-sort-button(type="button", data-sort="table")
+        i.sort-icon.sort-icon--table
+          span
+  
+  .grid
+    include showcase-item-lvl2.jade
+    include showcase-item-lvl2.jade
+    include showcase-item-lvl2.jade
+    include showcase-item-lvl2.jade
+    include showcase-item-lvl2.jade
+    include showcase-item-lvl2.jade

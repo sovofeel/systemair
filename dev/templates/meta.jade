@@ -1,0 +1,33 @@
+if (page == 'catalog')
+  title #{locals.head.title} | Каталог
+else if (page == 'product')
+  title #{locals.head.title} | Товар
+else
+  title #{locals.head.title}
+meta(charset="utf-8")
+meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+
+link(rel="icon", href="img/favicon.ico" type="image/x-icon")
+link(rel="shortcut icon", href="img/favicon.ico" type="image/x-icon")
+
+link(href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&subset=cyrillic-ext", rel="stylesheet")
+link(href="css/style.css", rel="stylesheet", type="text/css")
+
+meta(name="keywords", content=locals.head.keywords)
+meta(name="description", content=locals.head.description)
+
+meta(name="og:title", content=locals.head.title)
+meta(name="og:type", content="web_site")
+meta(name="og:url", content=locals.head.url)
+meta(name="og:site_name", content=locals.head.site_name)
+meta(name="og:description", content=locals.head.description)
+meta(name="og:image", content=locals.head.ogImage)
+
+meta(name="twitter:title", content=locals.head.title)
+meta(name="twitter:card", content="summary")
+meta(name="twitter:description", content=locals.head.description)
+meta(name="twitter:image", content=locals.head.ogImage)
+
+<!--[if lt IE 9]>
+script(type="text/javascript", src="http://html5shim.googlecode.com/svn/trunk/html5.js")
+<!--<![endif]-->

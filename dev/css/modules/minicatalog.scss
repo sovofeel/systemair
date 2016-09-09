@@ -1,0 +1,61 @@
+.minicat {
+  position: relative;
+  font-family: $os;
+
+  &-cols {
+    position: relative;
+    background: white;
+  }
+
+  &-col {
+    display: inline-block;
+    vertical-align: top;
+    width:33.33%;
+    margin-right:-3px;
+    box-sizing: border-box;
+
+    &:nth-child(2) {
+      .minicat-item {
+        border-left:1px solid $grey;
+        border-right:1px solid $grey;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  &-item {
+    display:block;
+    position: relative;
+    text-decoration: none;
+  }
+
+  &-image {
+    position: relative;
+    height:390px;
+    text-align: center;
+    line-height:400px;
+
+    img {
+      vertical-align: middle;
+      display:inline-block;
+      position: relative;
+      max-width:100%;
+      height:auto;
+    }
+  }
+
+  &-title {
+    font-size:16px;
+    line-height:22px;
+    color:$textColor;
+    display:block;
+    min-height:85px;
+    padding:0px 55px 45px;
+  }
+
+  a:hover {
+    .minicat-title {
+      color:$blue;
+    }
+  }
+}

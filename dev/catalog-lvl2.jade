@@ -1,0 +1,37 @@
+- var page = 'catalog';
+- var level = 2;
+
+doctype html
+html(lang="ru")
+	head
+
+		include templates/meta.jade
+
+	body
+		#all
+    
+			//img(src="/Users/aleksandrbespoasov/Desktop/cat-2.jpg", style="position:absolute;  top:0;left:50%; margin-left: -840px; z-index:666; opacity:0.4;")
+
+			#wrapper
+				include templates/top.jade
+				include templates/header.jade
+				include templates/bread.jade
+        
+				.catalog.catalog--lvl2
+					.center
+						.grid
+							.grid-col.grid-col--p23
+								include templates/catmenu.jade
+    
+							.grid-col.grid-col--p77
+								.catalog-banner.catbanner 
+									.catbanner-bg.js-image-size
+										img(src="img/catalog/catalog-2.jpg")
+									.catbanner-inside
+										.catbanner-title Сплит-системы постоянной производительности
+										.catbanner-content Бытовые кондиционеры Systemair разработаны с учетом потребностей малых и средних помещений 
+
+								include templates/showcase-lvl2.jade
+
+		include templates/footer.jade
+	include templates/scripts.jade

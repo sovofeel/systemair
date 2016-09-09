@@ -1,0 +1,22 @@
+doctype html
+html(lang="ru")
+	head
+
+		include templates/meta.jade
+
+	body
+		#all
+			
+			//img(src="/Users/aleksandrbespoasov/Desktop/lol.jpg", style="position:absolute; top:0; left:50%; margin-left: -160px; z-index:666; opacity:0.4;")
+		
+			#wrapper
+				include templates/top.jade
+				include templates/header.jade
+				
+				include templates/promoblock.jade
+				include templates/minicatalog.jade
+				
+				include templates/mainPageContent.jade
+			
+		include templates/footer.jade
+	include templates/scripts.jade

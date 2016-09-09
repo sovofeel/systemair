@@ -1,0 +1,54 @@
+.tabs {
+  position: relative;
+
+  &-list {
+    position: relative;
+    border-bottom:1px solid #e4e4e4;
+  }
+
+  &-item {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right:-4px;
+    text-align: center;
+    width:22%;
+    position: relative;
+    font-size:14px;
+    padding:45px 0 29px 0;
+    color:#9b9c9d;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      color:$blue;
+    }
+
+    &:first-child {
+      width:33%;
+    }
+
+    &.is-active {
+      color:$textColor;
+
+      &:before {
+        @include after();
+        height:3px;
+        bottom:-1px;
+        background: $textColor;
+        position: absolute;
+        left:0;
+        right:0;
+      }
+    }
+  }
+
+  &-tab {
+    padding-top:45px;
+    position: relative;
+    display:none;
+
+    &.is-active {
+      display:block;
+    }
+  }
+}

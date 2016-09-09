@@ -1,0 +1,166 @@
+.topline {
+  height:40px;
+  font-family: $os;
+  font-size:10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  z-index:40;
+  position: relative;
+  font-weight: 600;
+
+  &-menu {
+    position: absolute;
+    left: 27%;
+  }
+
+  &-help {
+    position: absolute;
+    left:62.5%;
+  }
+
+  &-cabinet {
+    position: absolute;
+    right:145px;
+  }
+
+  &-lang {
+    position: absolute;
+    right:10px;
+    z-index:10;
+  }
+}
+
+
+.topmenu {
+  font-weight: 600;
+
+  &-item {
+    display:inline-block;
+    margin-right:20px;
+  }
+
+  &-link {
+    color:$lightTextColor;
+    text-decoration: none;
+    height:40px;
+    line-height:40px;
+    display:block;
+
+    &:hover {
+      color:black;
+    }
+  }
+}
+
+
+
+.tophelp {
+  color:$lightTextColor;
+  height:40px;
+  line-height:41px;
+
+  a {
+    text-decoration: none;
+    color:$textColor;
+    font-weight: 600;
+
+    &:hover {
+      color:$blue;
+    }
+  }
+}
+
+
+
+.topcabinet {
+  top: 11px;
+
+  &-link {
+    position: relative;
+    color:$lightTextColor;
+    text-decoration: none;
+
+    &:before {
+      background: url(../img/i-key.png) no-repeat 0 0;
+      width:20px;
+      height:8px;
+      background-size: 14px 8px;
+      @include after();
+      position: absolute;
+      left:-20px;
+      top:2px;
+    }
+
+    &:hover {
+      color:black;
+    }
+  }
+}
+
+
+.toplang {
+  width:90px;
+  top:11px;
+  padding-left:20px;
+  box-sizing: border-box;
+  padding-bottom:10px;
+  cursor: pointer;
+
+  &-icon {
+    background: url(../img/i-planet.png) no-repeat 0 0;
+    position: absolute;
+    left:0;
+    width: 15px;
+    height:15px;
+    background-size: 100% 100%;
+  }
+
+  &-value {
+    color:$lightTextColor;
+  }
+
+  &-arrow {
+    background: url(../img/i-arrow-down.png) no-repeat 0 0;
+    width: 6px;
+    height:4px;
+    position: absolute;
+    top:6px;
+    right:10px;
+    background-size: 100% 100%;
+  }
+
+  &-list {
+    position: absolute;
+    top:21px;
+    left:-10px;
+    right:10px;
+    background: white;
+    border-radius: 2px;
+    box-shadow: 0 2px 3px rgba(0,0,0,.2);
+    max-height:0;
+    overflow: hidden;
+    transition: max-height 0.2s, padding 0.2s;
+  }
+
+  &:hover {
+    .toplang-list {
+      padding:4px 0;
+      max-height:200px
+    }
+  }
+
+  &-item {
+    display:block;
+    padding:2px 8px;
+    color:$lightTextColor;
+    text-decoration: none;
+
+    &:hover {
+      color:black;
+    }
+
+    &.is-active {
+      color:$textColor;
+    }
+  }
+}

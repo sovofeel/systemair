@@ -1,0 +1,22 @@
+- var page = 'product'
+
+doctype html
+html(lang="ru")
+	head
+
+		include templates/meta.jade
+
+	body
+		#all
+			
+			//img(src="/Users/aleksandrbespoasov/Desktop/3.jpg", style="position:absolute;  top:0;left:50%; margin-left: -840px; top: -7px; z-index:666; opacity:0.4;")
+
+			#wrapper
+				include templates/top.jade
+				include templates/header.jade
+				include templates/bread.jade
+				include templates/product.jade
+
+		include templates/footer.jade
+		include templates/popup-1.jade
+	include templates/scripts.jade

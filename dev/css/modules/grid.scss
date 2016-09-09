@@ -1,0 +1,47 @@
+.grid {
+  position: relative;
+
+  &-row {
+    position: relative;
+  }
+
+  &-col {
+    display:inline-block;
+    vertical-align: top;
+    margin-right:-4px;
+  }
+
+  &-col--1 {
+    width:100%;
+    margin-right:auto;
+    display:block;
+  }
+
+  &-col--2 {
+    width:50%;
+  }
+
+  &-col--3 {
+    width:33%;
+  }
+
+  &-col--3-2 {
+    width:66%;
+  }
+
+  &-col--4 {
+    width:25%;
+  }
+
+  &-col--4-3 {
+    width:75%;
+  }
+
+  &-col--p23 {
+    width:22.5%;
+  }
+
+  &-col--p77 {
+    width:77.5%;
+  }
+}

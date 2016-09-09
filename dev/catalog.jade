@@ -1,0 +1,39 @@
+- var page = 'catalog'
+
+doctype html
+html(lang="ru")
+	head
+
+		include templates/meta.jade
+
+	body
+		#all
+			
+			//img(src="/Users/aleksandrbespoasov/Desktop/lol.jpg", style="position:absolute;  top:0;left:50%; margin-left: -160px; z-index:666; opacity:0.4;")
+
+			#wrapper
+				include templates/top.jade
+				include templates/header.jade
+				include templates/bread.jade
+        
+				.catalog.catalog--lvl1
+					.center
+						.grid
+							.grid-col.grid-col--p23
+								include templates/catmenu.jade
+    
+							.grid-col.grid-col--p77
+								.catalog-banner.catbanner 
+									.catbanner-bg.js-image-size
+										img(src="img/catalog/catalog.jpg")
+									.catbanner-inside
+										.catbanner-title Бытовые<br />сплит-системы Sysplit
+										.catbanner-content Бытовые кондиционеры Systemair разработаны с учетом потребностей малых и средних помещений и адаптирован для российского рынка
+										.catbanner-link
+											a.btn.btn--rightArrow(href="#") Узнать больше
+										.js-catalog-menu-target
+
+								include templates/showcase.jade
+
+		include templates/footer.jade
+	include templates/scripts.jade

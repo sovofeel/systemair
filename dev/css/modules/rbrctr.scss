@@ -1,0 +1,262 @@
+$hgt: 520px;
+
+.rbrctr {
+  margin-bottom:60px;
+
+  &-slider {
+    height:$hgt;
+  }
+
+  &-slide {
+    height:$hgt;
+
+    &--1 {
+      background: url(../img/slider-2.jpg) no-repeat 0 0;
+      background-size: cover;
+    }
+  }
+
+  &-link {
+    display:block;
+    text-decoration: none;
+    color:white;
+    text-align: center;
+    padding:100px 20px 0;
+    min-height:200px;
+    font-size:15px;
+    font-family: $os;
+    line-height:22px;
+    font-weight: 600;
+    transition:background 0.2s;
+
+    &:hover {
+      transition:background 0.2s;
+    }
+
+    &--green {
+      background: $green;
+
+      &:hover {
+        background: lighten($green, 5%);
+      }
+    }
+
+    &--blue {
+      background: $blue;
+
+      &:hover {
+        background: lighten($blue, 5%);
+      }
+    }
+
+    &--cyan {
+      background: $cyan;
+      min-height:155px;
+      padding-top:65px;
+
+      &:hover {
+        background: lighten($cyan, 5%);
+      }
+
+      .rbrctr-title {
+        margin-top:-13px;
+      }
+    }
+  }
+
+  &-icon {
+    display:block;
+    margin:0 auto;
+    height:52px;
+  }
+
+  &-title {
+    margin:0 auto;
+    padding:40px 0 0 0;
+  }
+
+  &-inside {
+    padding:45px 55px;
+    text-align: left;
+    color:white;
+    max-width:350px;
+  }
+
+  &-address {
+    font-style: normal;
+    font-size:10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color:rgba(255,255,255,0.5);
+    display:block;
+    margin:45px 0 22px 0;
+    font-weight: 800;
+  }
+
+  &-headline {
+    font-size:36px;
+    line-height:1.2em;
+    font-family: $proxima;
+  }
+
+  &-content, &-subtitle {
+    font-size:15px;
+    line-height:22px;
+    font-family: $os;
+  }
+
+  &-subtitle {
+    margin:28px 0 10px 0;
+    font-weight: 700;
+  }
+}
+
+
+
+.rnews {
+  background: white;
+
+  &-inside {
+    position: relative;
+    padding:45px 55px;
+  }
+
+  &-main {
+    margin:50px 0 45px 0;
+    max-width:430px;
+    height:150px;
+    overflow: hidden;
+    display:block;
+    position: relative;
+    text-decoration: none;
+    font-size:22px;
+    line-height:28px;
+    font-family: $proxima;
+    color:$textColor;
+
+    &:hover {
+      color:$blue;
+    }
+  }
+
+  &-date {
+    font-family: $os;
+    font-size:10px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color:#bdbdbd;
+    margin-bottom:14px;
+  }
+
+  &-items {
+    margin-right:-50px;
+  }
+
+  &-item {
+    font-size: 15px;
+    line-height:20px;
+    font-family: $os;
+    text-decoration: none;
+    width:50%;
+    display:inline-block;
+    vertical-align: top;
+    margin-right:-4px;
+    color:$textColor;
+    min-height:130px;
+
+    .blue {
+      color:$blue;
+    }
+
+    &:hover {
+      color:$blue;
+    }
+
+    &:first-child {
+      width:48%;
+      padding-right:5%;
+    }
+
+    &:last-child {
+      width:38%;
+    }
+  }
+}
+
+
+.rvideo {
+  color:white;
+  display:block;
+  text-decoration: none;
+  min-height:$hgt - 18px;
+  position: relative;
+
+  &-bg {
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+  }
+
+  &-inside {
+    padding:45px 40px;
+    position: relative;
+  }
+
+  &-description {
+    text-align: center;
+    font-size:24px;
+    line-height:28px;
+    color:white;
+    font-family: $proxima;
+    max-width:400px;
+    margin:0 auto;
+    position: absolute;
+    left:20px;
+    right:20px;
+    top:360px;
+  }
+
+  .lbl--dark {
+    padding-left:12px;
+    padding-right:12px;
+    margin-right:6px;
+  }
+
+  &:after {
+    @include after();
+    background: rgba(0,0,0,.4);
+    width:100px;
+    height:100px;
+    border-radius: 50%;
+    position: absolute;
+    top:50%;
+    margin-top:-55px;
+    left:50%;
+    margin-left:-50px;
+    z-index:5;
+    transition: transform 0.2s;
+  }
+
+  &:before {
+    @include after();
+    position: absolute;
+    z-index:10;
+    border-bottom:10px solid transparent;
+    border-top:10px solid transparent;
+    border-left:15px solid white;
+    top:50%;
+    margin-top:-15px;
+    margin-left:-5px;
+    left:50%;
+    transition: transform 0.2s;
+  }
+
+  &:hover {
+    &:after, &:before {
+      transform: scale(1.2);
+    }
+  }
+}

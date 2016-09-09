@@ -1,0 +1,168 @@
+.footer {
+  a {
+    text-decoration: none;
+  }
+
+  &-top {
+    background: white;
+  }
+
+  &-bottom {
+    position: relative;
+    font-size:12px;
+    color:#9e9e9e;
+    font-family: $os;
+  }
+
+  &-rights {
+    font-size:13px;
+    line-height:18px;
+    color:$textColor;
+    position: absolute;
+    top:28px;
+    left:48px;
+  }
+
+  &-address {
+    font-style: normal;
+    position: absolute;
+    top:45px;
+    left:310px;
+    width:38%;
+
+    a {
+      color:#9e9e9e;
+
+      &:hover {
+        color:$blue;
+      }
+    }
+  }
+
+  &-phone {
+    margin-right: 10px;
+    display:inline-block;
+  }
+
+  &-logo {
+    position: absolute;
+    display:block;
+    background: url(../img/footer-logo.png) no-repeat;
+    width:117px;
+    height:9px;
+    background-size: 100% auto;
+    top:50px;
+    right:50px;
+
+    &:hover {
+      background-position: 0 -9px;
+    }
+  }
+
+  &-mail {
+    color:$cyan;
+    position: absolute;
+    top:46px;
+    right:305px;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+
+    &:hover {
+      color:$blue;
+    }
+  }
+}
+
+.fmenu {
+  position: relative;
+  border-bottom:1px solid #f5f5f5;
+  padding:0 30px;
+
+  &-item {
+    display:inline-block;
+    padding: 30px 0;
+    font-size:14px;
+    color:$textColor;
+    font-weight: 600;
+    font-family: $os;
+    text-decoration: none;
+    margin-right:-4px;
+    vertical-align: top;
+
+    &:hover {
+      color:$blue;
+    }
+
+    &:first-child {
+      width:30%;
+    }
+
+    &:nth-child(2) {
+      width:32%;
+    }
+
+    &:nth-child(3) {
+      width:25%;
+    }
+
+    &:nth-child(4) {
+      width:13%;
+      text-align: right;
+    }
+  }
+}
+
+
+.fnav {
+  position: relative;
+  padding:0 30px;
+
+  &-item {
+    position: relative;
+    display:inline-block;
+    margin-right:48px;
+    padding:30px 0;
+    vertical-align: top;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: $os;
+    text-decoration: none;
+    color:#9e9e9e;
+
+    &:hover {
+      color:$blue;
+    }
+  }
+
+  &-up {
+    position: absolute;
+    right:15px;
+    top:20px;
+    border:1px solid $grey;
+    border-radius: 2px;
+    height:37px;
+    width:37px;
+    box-sizing: border-box;
+    text-align: center;
+
+    i {
+      background: url(../img/i-arrow-up.png) no-repeat 0 0;
+      width:8px;
+      height:5px;
+      background-size: 100% 100%;
+      display:block;
+      margin:15px auto 0;
+    }
+
+    &:hover {
+      background: $grey;
+    }
+
+    &:active {
+      background: $grey;
+      box-shadow: inset 0 1px 2px rgba(0,0,0,.1)
+    }
+  }
+}

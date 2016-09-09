@@ -1,0 +1,92 @@
+.catmobmenu {
+  position: relative;
+  display:block;
+  height:60px;
+  background: white;
+  margin:20px -10px;
+  cursor: pointer;
+  display:none;
+  user-select: none;
+
+  &:after {
+    @include after();
+    position: absolute;
+    top:25px;
+    right:21px;
+    width:5px;
+    height:5px;
+    border:2px solid $green;
+    border-left:0;
+    border-top:0;
+    transform: rotate(45deg);
+  }
+
+  a {
+    color:$textColor;
+    text-decoration: none;
+    display:block;
+
+    &:hover {
+      color:$blue;
+    }
+  }
+
+  &.is-active {
+    background: $green;
+    transition: all 0.3s;
+
+    .catmobmenu-placeholder {
+      color:white;
+    }
+    &:after {
+      border-color:white;
+    }
+    .catmobmenu-list {
+      opacity: 1;
+      max-height:600px;
+      transition: max-height 0.3s, opacity 0.1s;
+    }
+  }
+
+  &-placeholder {
+    position: relative;
+    height:60px;
+    line-height:60px;
+    padding:0 20px;
+    font-size:14px;
+    color:$textColor;
+  }
+
+  &-list {
+    position: relative;
+    padding:26px 30px 20px;
+    background: white;
+    box-shadow: 0 0px 9px rgba(0,0,0,.2);
+    max-height:0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s, opacity 0.4s;
+  }
+
+  &-lvl1 {
+    & > a {
+      font-size:14px;
+      line-height:20px;
+      margin:0 0 12px 0;
+    }
+  }
+
+  &-lvl2 {
+    &:last-child {
+      margin-bottom:16px;
+    }
+    a {
+      color:#757575;
+      font-size:11px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      display:block;
+      margin-bottom:8px;
+    }
+  }
+}

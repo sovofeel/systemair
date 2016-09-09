@@ -1,0 +1,197 @@
+.mobMenu {
+  background: #eeeeee;
+  position: fixed;
+  top:70px;
+  left:0;
+  right:0;
+  text-align: center;
+  padding:30px 0;
+  z-index:50;
+  overflow: scroll;
+  bottom:0;
+  box-sizing: border-box;
+  display:none;
+
+  .center {
+    max-width:400px;
+  }
+
+  &-search {
+    position: relative;
+    background: white;
+    border-radius: 50px;
+    height:50px;
+
+    .topsearch-form {
+      height:50px;
+    }
+
+    .topsearch-input {
+      padding-top:18px;
+    }
+  }
+
+  &-help, &-mail {
+    position: relative;
+    text-align: center;
+    font-size:10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color:#a1a1a1;
+    margin:30px auto 0;
+
+    a {
+      color:#616161;
+      font-size:18px;
+      text-decoration: none;
+      display: block;
+      margin:0 0 5px 0;
+
+      &:hover {
+        color:$blue;
+      }
+    }
+  }
+
+  &-mail {
+    margin-top:20px;
+    margin-bottom:20px;
+
+    a {
+      color:$cyan;
+
+      &:hover {
+        color:$blue;
+      }
+    }
+  }
+
+  &-fakeLink {
+    color:$cyan;
+    font-size:18px;
+    text-decoration: none;
+    display: block;
+    margin:0 0 5px 0;
+  }
+}
+
+
+.mnav {
+  position: relative;
+  font-family: $os;
+  font-size:18px;
+  padding-top:28px;
+  padding-bottom:15px;
+
+  &-item {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color:$textColor;
+    padding:11px 0;
+
+    &:hover {
+      color:$blue;
+    }
+  }
+}
+
+
+.msub {
+  position: relative;
+
+  &-item {
+    font-family: $os;
+    font-size:12px;
+    color:#757575;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display:block;
+    text-decoration: none;
+    padding:8px 0;
+
+    &:hover {
+      color:$blue;
+    }
+  }
+}
+
+
+.muser {
+  position: relative;
+  border:1px solid #e3e3e3;
+  border-left:0;
+  border-right:0;
+  padding:25px 0;
+  text-align: center;
+  margin:25px 0 0 0;
+  z-index:40;
+
+  .topcabinet {
+    font-size:12px;
+    text-transform: uppercase;
+
+    &-link:before {
+      top:3.5px;
+    }
+  }
+
+  .toplang {
+    position: relative;
+    display:inline-block;
+    font-size:12px;
+    text-transform: uppercase;
+    padding-left:10px;
+    margin-left:-10px;
+
+    &:hover {
+      .toplang-value {
+        color:$textColor;
+      }
+    }
+
+    &-icon {
+      margin-top:1.5px;
+      margin-right:5px;
+    }
+
+    &-arrow {
+      top: 7px;
+      right: -5px;
+    }
+
+    select {
+      position: absolute;
+      -webkit-appearance: none;
+      appearance: none;
+      display:block;
+      top:0;
+      left:0;
+      bottom:0;
+      right:0;
+      opacity: 0;
+      width:100%;
+      height:100%;
+      z-index:10;
+      cursor: pointer;
+      display:none;
+    }
+
+    &-list {
+      margin-right:-15px;
+      margin-left:10px;
+    }
+  }
+}
+
+
+.is-touch-device {
+  .muser .toplang {
+    &-list {
+      display:none !important;
+    }
+    select {
+      display:block;
+    }
+  }
+}

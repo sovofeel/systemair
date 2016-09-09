@@ -1,0 +1,39 @@
+.breadcrumbs {
+  background: #757575;
+  color:#e0e0e0;
+  font-family: $proxima;
+  font-size:13px;
+}
+
+
+.bread {
+  &-wrap {
+    position: relative;
+    padding:16px 0 15px;
+  }
+
+  &-item {
+    display:inline-block;
+    margin-right:9px;
+    vertical-align: top;
+  }
+
+  &-separator {
+    width:3px;
+    height:3px;
+    border:2px solid rgba(255,255,255,0.4);
+    border-left:0;
+    border-top:0;
+    margin:7px 0 0 0;
+    transform: rotate(-45deg);
+  }
+
+  &-link {
+    color:white;
+    text-decoration: none;
+
+    &:hover {
+      color:$lightLinkColor;
+    }
+  }
+}

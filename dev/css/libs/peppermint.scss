@@ -1,0 +1,188 @@
+/* Peppermint required styles + default appearance styles */
+
+.peppermint.peppermint-active {
+    position: relative;
+    overflow: hidden;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.peppermint.peppermint-active .peppermint-slides {
+    position: relative;
+    overflow: hidden; /* clearfix */
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+}
+
+.peppermint.peppermint-active .peppermint-slides > * {
+    float: left;
+    margin: 0;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    tap-highlight-color: transparent;
+}
+
+.peppermint.peppermint-active .peppermint-slides a:active,
+.peppermint.peppermint-active .peppermint-slides a:active img {
+    outline: none;
+}
+
+.peppermint.peppermint-active,
+.peppermint.peppermint-active .peppermint-dots,
+.peppermint.peppermint-active .peppermint-slides,
+.peppermint.peppermint-active .peppermint-slides > * {
+    -webkit-transform: translate3d(0,0,0);
+    -ms-transform: translate3d(0,0,0);
+    -moz-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.peppermint.peppermint-mouse .peppermint-slides {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: grab;
+}
+
+.peppermint.peppermint-mouse.peppermint-drag .peppermint-slides * {
+    cursor: move;
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+    cursor: grabbing;
+}
+
+/* default appearance styles */
+.peppermint {
+    text-align: center;
+}
+
+.peppermint figure {
+}
+
+.peppermint figure img {
+}
+
+.peppermint figure figcaption {
+}
+
+.peppermint.peppermint-active {
+}
+
+.peppermint-slides {
+}
+
+/* dots */
+ul.peppermint-dots {
+    margin: 0.6em 0;
+    padding: 0;
+    text-align: center;
+    list-style-type: none;
+}
+
+.peppermint.peppermint-active ul.peppermint-dots {
+    margin: 0 0 0.6em 0;
+}
+
+.peppermint.peppermint-active .peppermint-slides + ul.peppermint-dots {
+    margin: 0.6em 0 0 0;
+}
+
+ul.peppermint-dots > li {
+    display: inline-block;
+    position: relative;
+    padding: 0.5em 0.6em;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    /* ie7 fallback */
+    *display: inline;
+    *zoom: 1;
+}
+
+ul.peppermint-dots > li.peppermint-mouse-clicked,
+ul.peppermint-dots > li:active {
+    outline: 0;
+}
+
+ul.peppermint-dots > li > span {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -4px 0 0 -4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #9b9890;
+}
+
+ul.peppermint-dots > li.peppermint-active-dot > span {
+    margin: -6px 0 0 -6px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #9b9890;
+    background: transparent;
+}
+
+.peppermint-dots {
+  position: absolute;
+  bottom:40px;
+  left:45px;
+  right:auto;
+  width:auto;
+}
+
+ul.peppermint-dots > li {
+  padding-left:5px;
+  padding-right:5px;
+  outline: none !important;
+}
+
+ul.peppermint-dots > li > span {
+  background: rgba(255,255,255,0.4);
+  //border:1px solid rgba(255,255,255,0.4);
+  border:0;
+  margin: -5px 0 0 -5px;
+  width: 10px;
+  height: 10px;
+  box-sizing: border-box;
+  outline: none !important;
+}
+
+ul.peppermint-dots > li.peppermint-active-dot > span {
+  background: white;
+  border:1px solid white;
+  margin: -5px 0 0 -5px;
+  width: 10px;
+  height: 10px;
+  box-sizing: border-box;
+}
+
+
+.js-dot {
+  position: absolute;
+  bottom:8px;
+  left:6px;
+  width:10px;
+  height:10px;
+  background: white;
+  border-radius: 10px;
+  opacity: 0;
+}

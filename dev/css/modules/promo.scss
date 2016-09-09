@@ -1,0 +1,101 @@
+.promo {
+  position: relative;
+  padding:20px 0 0 0;
+
+  &-slider {
+    position: relative;
+    display:inline-block;
+    vertical-align: top;
+    width:66.66%;
+  }
+
+  &-slide {
+    position: relative;
+    display:block;
+    height:520px;
+    color:white;
+    text-align: left;
+
+    &--1 {
+      background: $blue url(../img/slide-1.jpg) no-repeat right bottom;
+      background-size: auto 100%;
+    }
+  }
+
+  &-content {
+    padding:72px 50px 0;
+    max-width:380px;
+    font-size:16px;
+    line-height:26px;
+    font-family: $os;
+    font-weight: 400;
+  }
+
+  &-title {
+    font-size:30px;
+    line-height: 40px;
+    padding:0 0 40px 0;
+    font-family: $proxima;
+  }
+
+  &-where {
+    position: relative;
+    display:inline-block;
+    vertical-align: top;
+    width:33.33%;
+    margin-right:-4px;
+    background: white url(../img/ipad.jpg) no-repeat bottom center;
+    background-size: 100% auto;
+
+    height:520px
+  }
+}
+
+
+.wtb {
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  font-family: $os;
+  font-size:14px;
+  line-height:22px;
+  color:#bdbdbd;
+  text-decoration: none;
+
+  &-content {
+    position: relative;
+    padding:65px 0 0 0;
+    max-width:200px;
+    margin:0 auto;
+  }
+
+  &-title {
+    font-family: $proxima;
+    font-size:22px;
+    color:$textColor;
+    margin-bottom:15px;
+  }
+
+  &:after {
+    background: url(../img/i-pin.png) no-repeat 0 0;
+    @include after();
+    position: absolute;
+    top:200px;
+    left:50%;
+    width:81px;
+    height:115px;
+    background-size: 100% 100%;
+    margin-left:-36px;
+    transition: transform 0.2s;
+  }
+
+  &:hover {
+    &:after {
+      transform: translateY(-10px) scale(1.05);
+    }
+
+    .wtb-title {
+      color:$blue;
+    }
+  }
+}

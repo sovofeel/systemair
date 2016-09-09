@@ -1,0 +1,36 @@
+.header-helper
+header.header
+  .center
+    .header-logo.logo
+      a.logo-link(href="index.html")
+        img(src="img/logo.png", width="198", height="46", class="logo-image")
+    
+    .header-menu.mainmenu
+      .mainmenu-list
+        .mainmenu-item
+          a.mainmenu-link(href="catalog.html") Продукция
+        .mainmenu-item
+          a.mainmenu-link(href="#") Сервис
+        .mainmenu-item
+          a.mainmenu-link(href="#") Объекты
+        .mainmenu-item
+          a.mainmenu-link(href="#") Подбор по параметрам
+    
+    .header-search.topsearch    
+      .topsearch-form
+        label.topsearch-input
+          input(type="text", placeholder="Поиск")
+        .topsearch-button
+          button(type="submit")
+    
+    
+    .header-searchIcon.js-search-icon
+    
+    .header-menuIcon.js-menu-icon
+      .lines
+        .line.line--1
+        .line.line--2
+        .line.line--3
+
+
+include ./mobile-menu.jade
