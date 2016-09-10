@@ -11,15 +11,15 @@ const initTabs = function() {
           $tab = $this.find('.js-tabs-tab'),
           $links = $this.find('.js-tabs-link');
 
-    const activeStart = $this.find('.js-tabs-tab.'+activeClass).index();
-    $links.removeClass(activeClass);
-    $this.find('.js-tabs-link:eq('+activeStart+')').addClass(activeClass);
-
     $tab.each(function(){
       const $tb = $(this);
       $tb.attr('data-index', tabsCount);
       tabsCount++;
     });
+
+    const activeStart = $this.find('.js-tabs-tab.'+activeClass).attr('data-index');
+    $links.removeClass(activeClass);
+    $this.find('.js-tabs-link:eq('+activeStart+')').addClass(activeClass);
 
     $tab.each(function(){
       const $tb = $(this);
