@@ -1,6 +1,16 @@
 .product
   .center
     .product-wrap
+      
+      .product-slider.pSlider
+        .pSlider-wrapper.peppermint
+          figure.pSlider-slide
+            img(src="img/product/main.jpg", alt="product")
+          figure.pSlider-slide
+            img(src="img/product/main-2.jpg", alt="product")
+          figure.pSlider-slide
+            img(src="img/product/main-3.jpg", alt="product")
+    
       .product-top
         .product-article Артикул: <b>27872</b>
         
@@ -12,7 +22,7 @@
           
           .product-meta
             .product-row Класс энергоэффективности:  <span class="green">А+</span>
-            .product-row
+            .product-row.product-row--buttons
               .lbl.product-price 26 900.–
         
         .product-photos.js-thumbs-wrapper
@@ -39,10 +49,17 @@
               .tabs-item.js-tabs-link Документация
               .tabs-item.js-tabs-link Аксессуары
             .tabs-content
-              .tabs-tab.js-tabs-tab.is-active
+              
+              .product-freeze.is-tblt-only
                 .product-freezeRate Охлаждающая способность: <span class="value">7000 BTU</span>
                 .product-freezeVisual.fv
                   .fv-pointer(style="left:70%;")
+            
+              .tabs-tab.js-tabs-tab.is-active
+                .product-freeze.is-no-tlbt
+                  .product-freezeRate Охлаждающая способность: <span class="value">7000 BTU</span>
+                  .product-freezeVisual.fv
+                    .fv-pointer(style="left:70%;")
                 
                 .product-chapter
                   h2 Основные характеристики

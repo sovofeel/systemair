@@ -1,0 +1,56 @@
+.pSlider {
+  position: relative;
+  margin-bottom:50px;
+  display:none;
+
+  &-slide {
+    height:200px;
+    line-height:210px;
+
+    img {
+      max-width:300px;
+      width:90%;
+      display:inline-block;
+      vertical-align: middle;
+      margin:0 auto;
+    }
+  }
+
+  ul.peppermint-dots {
+    position: relative;
+    text-align: center;
+    left:auto;
+    bottom: auto;
+    margin:-23px auto 0 !important;
+
+    & > li {
+      width:54px;
+      padding:0;
+      text-align: center;
+    }
+
+    & > li span {
+      width: 50px;
+      position: relative;
+      height:4px;
+      background: #d8dce0;
+      margin:auto !important;
+      left:auto !important;
+      top:auto !important;
+      border-radius: 0;
+    }
+
+    & > li.peppermint-active-dot > span {
+      background: $blue;
+      height:4px;
+      margin:auto !important;
+      left:auto !important;
+      top:auto !important;
+      border:0 !important;
+    }
+  }
+
+  .js-dot {
+    display: none;
+  }
+}
