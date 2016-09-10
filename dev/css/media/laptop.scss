@@ -153,7 +153,12 @@
 
   .showcase {
     &-link {
-      padding-bottom:30px;
+      padding-bottom:60px;
+    }
+    &--list {
+      .showcase-link {
+        padding-bottom:30px;
+      }
     }
     &-title {
       min-height:70px;
@@ -259,6 +264,28 @@
 
     &-description {
       top:330px;
+    }
+  }
+
+
+
+  .showcase {
+    &--list {
+      .showcase {
+        &-content {
+          margin-left:6%;
+          width:77%;
+        }
+        &-image {
+          width:17%;
+        }
+        &-title {
+          padding-right:3%;
+        }
+        &-other {
+          width:36%;
+        }
+      }
     }
   }
 }

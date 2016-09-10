@@ -366,3 +366,10 @@ $mobileMaxWidth: 380px;
     padding-top:358px;
   }
 }
+
+
+@media (max-width:450px) {
+  .showcase--list .showcase-link {
+    margin-left:10px;
+  }
+}
