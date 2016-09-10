@@ -48,6 +48,16 @@
   &-link {
     color:$textColor;
     text-decoration: none;
+    position: relative;
+
+    &:after {
+      @include after();
+      position: absolute;
+      left:0;
+      right:0;
+      bottom:-36px;
+      top:-44px;
+    }
 
     &:hover {
       color:$blue;

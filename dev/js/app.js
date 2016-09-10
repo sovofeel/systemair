@@ -14,6 +14,7 @@ import initPopups from './popup';
 import initCopier from './copier';
 import initMobileMenu from './mobile-menu';
 import initCatmobmenu from './catmobmenu';
+import initInnerMenu from './inner-menu';
 
 $(function(){
 
@@ -39,5 +40,6 @@ $(function(){
   initPopups();
   initMobileMenu();
   initCatmobmenu();
+  initInnerMenu();
 
 });

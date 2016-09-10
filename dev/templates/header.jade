@@ -8,11 +8,11 @@ header.header
     .header-menu.mainmenu
       .mainmenu-list
         .mainmenu-item
-          a.mainmenu-link(href="catalog.html") Продукция
+          a.mainmenu-link.js-inner-menu-trigger(href="catalog.html", data-innermenu="1") Продукция
         .mainmenu-item
           a.mainmenu-link(href="#") Сервис
         .mainmenu-item
-          a.mainmenu-link(href="#") Объекты
+          a.mainmenu-link.js-inner-menu-trigger(href="#", data-innermenu="2") Объекты
         .mainmenu-item
           a.mainmenu-link(href="#") Подбор по параметрам
     
@@ -34,3 +34,4 @@ header.header
 
 
 include ./mobile-menu.jade
+include ./inner-menu.jade

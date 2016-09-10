@@ -25,7 +25,7 @@ var gulp = require('gulp'),
 
 gulp.task('markup', function() {
 
-	return gulp.src(['./dev/catalog.jade'])
+	return gulp.src(['./dev/*.jade'])
 		.pipe(jade({
 			pretty: true,
 			locals: JSON.parse(fs.readFileSync('./dev/static/content.json', {encoding: 'utf8'}))

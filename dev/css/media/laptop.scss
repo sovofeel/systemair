@@ -163,6 +163,22 @@
       line-height:200px;
     }
   }
+
+
+  // innermenu
+
+  .innerMenu {
+    &-wrap {
+      margin:0;
+    }
+    &-item {
+      padding:15px 25px 25px;
+    }
+    &-image {
+      height:160px;
+      line-height:130px;
+    }
+  }
 }
 
 
