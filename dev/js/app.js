@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import AppCnstns from './constants';
 import AppHelpers from './helpers';
 

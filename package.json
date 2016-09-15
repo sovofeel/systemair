@@ -1,5 +1,5 @@
 {
-  "name": "System Air",
+  "name": "SystemAir",
   "version": "0.1.0",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
